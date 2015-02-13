@@ -1,3 +1,0 @@
-Etapp 1
-
-Elo Eilonen teeb esimese commit-i Postimees2 reposse.
