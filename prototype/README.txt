@@ -1,3 +1,11 @@
+Prototüübi kuvamiseks:
+1. mine http://rawgit.com/
+2. sisesta index.html-i URL (https://github.com/eloeilonen/postimees2/blob/master/prototype/index.html)
+
+https://cdn.rawgit.com/eloeilonen/postimees2/master/prototype/index.html
+
+
+---------------------------------------------------------------------------------------
 Important Notice:
 
 You have successfully downloaded your pidoco project from our web server.
