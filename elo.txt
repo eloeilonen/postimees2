@@ -1,3 +1,5 @@
 Etapp 1
 
 Elo Eilonen teeb esimese commiti Postimees 2 reposse.
+
+Muudan olemas olevat faili lisades siia ühe ebavajaliku rea.
