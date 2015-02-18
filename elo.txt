@@ -1,9 +1,0 @@
-Etapp 1
-
-Elo Eilonen teeb esimese commiti Postimees 2 reposse.
-
-Muudan olemas olevat faili lisades siia �he ebavajaliku rea.
-
-Elo muudab enda loodud faili, mida Karl just muutis.
-
-Brandon lisab ka omalt poolt midagi siia :) 
