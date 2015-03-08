@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to Postimees2!</title>
+	<title>Postimees2</title>
 
 	<style type="text/css">
 
@@ -31,7 +31,7 @@
 	}
 
 	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
+		font-family: Consolas, Monaco, "Courier New", Courier, monospace;
 		font-size: 12px;
 		background-color: #f9f9f9;
 		border: 1px solid #D0D0D0;
@@ -57,14 +57,14 @@
 	#container{
 		margin: 10px;
 		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
+
 	}
 	</style>
 </head>
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Welcome to Postimees2!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
