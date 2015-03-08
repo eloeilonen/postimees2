@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to Postimees2!</title>
 
 	<style type="text/css">
-
 
 
 	body {
 		background-color: #fff;
 		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		font: 13px/20px "normal Helvetica", Arial, sans-serif;
 		color: #4F5155;
 	}
 
