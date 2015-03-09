@@ -10,3 +10,4 @@ app/application/logs/*
 
 Vagrant/*
 !Vagrant/Vagrant.zip
+!Vagrant/README.txt
