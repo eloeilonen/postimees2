@@ -1,0 +1,92 @@
+-- Adminer 4.2.0 MySQL dump
+
+SET NAMES utf8mb4;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `kasutaja`;
+CREATE TABLE `kasutaja` (
+  `kasutaja_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `kasutaja_EESNIMI` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
+  `kasutaja_PERENIMI` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
+  `kasutaja_EMAIL` varchar(30) COLLATE utf8_estonian_ci NOT NULL,
+  PRIMARY KEY (`kasutaja_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+INSERT INTO `kasutaja` (`kasutaja_ID`, `kasutaja_EESNIMI`, `kasutaja_PERENIMI`, `kasutaja_EMAIL`) VALUES
+(1,	'eesnimi1',	'perenimi1',	'kasutaja1@gmail.com'),
+(2,	'eesnimi2',	'perenimi2',	'kasutaja2@hotmail.com'),
+(3,	'eesnimi3',	'perenimi3',	'kasutaja3@yahoo.com');
+
+DROP TABLE IF EXISTS `kommentaar`;
+CREATE TABLE `kommentaar` (
+  `kommentaari_uudise_ID` int(11) NOT NULL,
+  `kommenteerija_NIMI` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
+  `kommenteerija_EMAIL` varchar(30) COLLATE utf8_estonian_ci NOT NULL,
+  `kommentaari_TEKST` varchar(500) COLLATE utf8_estonian_ci NOT NULL,
+  `kommentaari_KUUPAEV` date NOT NULL,
+  KEY `kommentaari_uudise_ID` (`kommentaari_uudise_ID`),
+  CONSTRAINT `kommentaar_ibfk_1` FOREIGN KEY (`kommentaari_uudise_ID`) REFERENCES `uudis` (`uudise_ID`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+INSERT INTO `kommentaar` (`kommentaari_uudise_ID`, `kommenteerija_NIMI`, `kommenteerija_EMAIL`, `kommentaari_TEKST`, `kommentaari_KUUPAEV`) VALUES
+(1,	'nimi1',	'email1@hotmail.com',	'tekst1',	'2019-03-20'),
+(1,	'nimi2',	'email2@gmail.com',	'tekst2',	'2010-10-10'),
+(6,	'Elo',	'Eilonen',	'See on testkommentaar',	'2015-01-01');
+
+DROP TABLE IF EXISTS `teema`;
+CREATE TABLE `teema` (
+  `teema_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `teema_NIMI` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
+  PRIMARY KEY (`teema_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+INSERT INTO `teema` (`teema_ID`, `teema_NIMI`) VALUES
+(2,	'Eesti'),
+(3,	'Tartu'),
+(4,	'Tallinn'),
+(5,	'Pärnu'),
+(6,	'Välismaa'),
+(7,	'Sport'),
+(8,	'Majandus'),
+(9,	'Ãri'),
+(10,	'Tervis'),
+(11,	'Kõmu');
+
+DROP TABLE IF EXISTS `uudis`;
+CREATE TABLE `uudis` (
+  `uudise_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `uudise_teema_ID` int(11) NOT NULL,
+  `autori_ID` int(11) NOT NULL,
+  `uudise_PEALKIRI` varchar(50) COLLATE utf8_estonian_ci NOT NULL,
+  `uudise_EELVAADE` varchar(300) COLLATE utf8_estonian_ci NOT NULL,
+  `uudise_TEKST` text COLLATE utf8_estonian_ci NOT NULL,
+  `uudise_KUUPAEV` date NOT NULL,
+  `uudise_LAT_COORD` float NOT NULL,
+  `uudise_LON_COORD` float NOT NULL,
+  `uudise_PILT` varchar(100) COLLATE utf8_estonian_ci NOT NULL,
+  `uudise_VAATAMISED` int(11) NOT NULL,
+  PRIMARY KEY (`uudise_ID`),
+  KEY `autori_ID` (`autori_ID`),
+  KEY `uudise_teema_ID` (`uudise_teema_ID`),
+  CONSTRAINT `uudis_ibfk_2` FOREIGN KEY (`autori_ID`) REFERENCES `kasutaja` (`kasutaja_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `uudis_ibfk_3` FOREIGN KEY (`uudise_teema_ID`) REFERENCES `teema` (`teema_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+INSERT INTO `uudis` (`uudise_ID`, `uudise_teema_ID`, `autori_ID`, `uudise_PEALKIRI`, `uudise_EELVAADE`, `uudise_TEKST`, `uudise_KUUPAEV`, `uudise_LAT_COORD`, `uudise_LON_COORD`, `uudise_PILT`, `uudise_VAATAMISED`) VALUES
+(1,	2,	3,	'Pealkiri1',	'Eelvaade1',	'Tekst1',	'2019-03-20',	0,	0,	'',	0),
+(6,	2,	1,	'pealkiri3',	'eelvaade3',	'tekst3',	'2005-05-05',	0,	5135120,	'pilt1',	0),
+(9,	2,	1,	'Testuudise pealkiri',	'testuudise eelvaade',	'testuudise tekst',	'2015-01-01',	58.3784,	26.7147,	'',	0);
+
+DROP TABLE IF EXISTS `uudiskirja_tellijad`;
+CREATE TABLE `uudiskirja_tellijad` (
+  `tellija_EMAIL` varchar(30) NOT NULL,
+  `tellija_NIMI` varchar(20) NOT NULL,
+  UNIQUE KEY `tellija_EMAIL` (`tellija_EMAIL`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `uudiskirja_tellijad` (`tellija_EMAIL`, `tellija_NIMI`) VALUES
+('mocktellijat@tomat.tomat',	'Mock Tellija');
+
+-- 2015-03-21 21:48:08
