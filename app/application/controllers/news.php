@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 class News extends CI_Controller {
 
