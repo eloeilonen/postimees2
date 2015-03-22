@@ -10,7 +10,7 @@
 	<label for="teema">Teema</label>
 	<input type="input" name="teema" value="2"/><br />
 
-	<p>Asukoha andned</p>
+	<p>Asukoha andmed</p>
 	<label for="lat_coord">Asukoha pikkuskraad</label>
 	<input type="input" name="lat_coord" value="58.378355"/>
 	<label for="lon_coord">Asukoha laiuskraad</label>

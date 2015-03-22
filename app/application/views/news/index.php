@@ -9,11 +9,11 @@
 
 <?php endforeach ?>
 
-<?php echo '<hr><p><h2>Kommenteeritumad uudised</h2></p>' ?>
+<?php echo '<hr><h2>Kommenteeritumad uudised</h2>' ?>
 
 <?php foreach ($news_stats as $news_stats): ?>
 	<a href="news/<?php echo $news_stats['uudise_ID'] ?>"><?php echo $news_stats['uudise_PEALKIRI']?></a>
 	<?php echo ' | '.$news_stats['count'].'<br>'?>
 <?php endforeach ?>
 
-<?php echo '<br><hr><p></p><a href="editor/create">Lisa uudis</a></p>' ?>
+<?php echo '<br><hr><p><a href="editor/create">Lisa uudis</a></p>' ?>
