@@ -1,7 +1,7 @@
 <?php echo '<p><a href="editor">Logi sisse</a></p><hr><br>' ?>
 <?php foreach ($uudis as $news_item): ?>
 
-    <p><a href="news/<?php echo $news_item['uudise_ID'] ?>"><h2><?php echo $news_item['uudise_PEALKIRI'] ?></h2></a></p>
+    <h2><a href="news/<?php echo $news_item['uudise_ID'] ?>"><?php echo $news_item['uudise_PEALKIRI'] ?></h2>
     <div class="main">
 		<a href="news/<?php echo $news_item['uudise_ID'] ?>"><?php echo $news_item['uudise_PILT'] ?></a><br>
         <?php echo $news_item['uudise_EELVAADE']?>
