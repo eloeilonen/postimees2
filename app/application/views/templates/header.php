@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
 	<title><?php echo $title ?> - Postimees 2</title>
 </head>
