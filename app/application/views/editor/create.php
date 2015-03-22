@@ -4,8 +4,8 @@
 
 <?php echo form_open('editor/create') ?>
 
-	<label for="pealkiri-field">Pealkiri</label>
-	<input type="text" name="pealkiri" id = "pealkiri-id"/><br />
+	<label for="pealkiri">Pealkiri</label>
+	<input type="text" name="pealkiri" /><br />
 
 	<label for="teema">Teema</label>
 	<input type="text" name="teema" value="2"/><br />
