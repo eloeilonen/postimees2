@@ -5,7 +5,7 @@
 <?php echo form_open('editor/create') ?>
 
 	<label for="pealkiri">Pealkiri</label>
-	<input type="text" name="pealkiri" /><br />
+	<input type="text" name="input" /><br />
 
 	<label for="teema">Teema</label>
 	<input type="text" name="teema" value="2"/><br />
