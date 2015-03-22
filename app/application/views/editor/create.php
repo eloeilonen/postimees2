@@ -14,7 +14,7 @@
 	<label for="lat_coord">Asukoha pikkuskraad</label>
 	<input type="number" name="lat_coord" id="lat_coord" value="58.378355"/>
 	<label for="lon_coord">Asukoha laiuskraad</label>
-	<input type="number" name="lon_coord" id="lon coord" value="26.714663"/><br />
+	<input type="number" name="lon_coord" id="lon_coord" value="26.714663"/><br />
 
 	<label for="tekst">Tekst</label>
 	<textarea name="tekst" id="tekst"></textarea><br />
@@ -23,7 +23,7 @@
 	<textarea name="eelvaade" id="eelvaade"></textarea><br />
 
 	<label for="date">Kuupäev</label>
-	<input type="polyfill" name="date" id="date" value="2015-01-01"/><br />
+	<input type="date" name="date" id="date" value="2015-01-01"/><br />
 
 	<label for="autor">Autor</label>
 	<input type="number" name="autor" id="autor" value="1"/><br />
