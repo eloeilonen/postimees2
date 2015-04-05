@@ -17,7 +17,7 @@
 		    data-clientid="1082678952766-30kadv0uf0didhdidpefd66um24gom78.apps.googleusercontent.com"
 		    data-cookiepolicy="single_host_origin"
 		    data-requestvisibleactions="http://schema.org/AddAction"
-		    data-scope="https://www.googleapis.com/auth/plus.login">
+		    data-scope="https://www.googleapis.com/auth/userinfo.email">
 		</span>
 	</span>
 	
