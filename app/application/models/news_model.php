@@ -10,6 +10,7 @@ class News_model extends CI_Model {
 	{
 	if ($id === FALSE)
 	{
+		$this->db->order_by('uudise_KUUPAEV', 'DESC');
 		$query = $this->db->get('uudis');
 		return $query->result_array();
 	}

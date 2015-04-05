@@ -43,6 +43,7 @@ $route['news/(:any)'] = 'news/view/$1';
 $route['default_controller'] = 'news';
 $route['editor'] = 'editor/index';
 $route['editor/create'] = 'editor/create';
+$route['editor/create'] = 'editor/create';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

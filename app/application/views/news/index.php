@@ -4,7 +4,8 @@
     <h2><a href="news/<?php echo $news_item['uudise_ID'] ?>"><?php echo $news_item['uudise_PEALKIRI'] ?></a></h2>
     <div class="main">
 		<a href="news/<?php echo $news_item['uudise_ID'] ?>"><?php echo $news_item['uudise_PILT'] ?></a><br>
-        <?php echo $news_item['uudise_EELVAADE']?>
+        <?php echo $news_item['uudise_EELVAADE']?><br>
+        <?php echo $news_item['uudise_KUUPAEV']?>
     </div>
 
 <?php endforeach ?>
