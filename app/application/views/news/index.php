@@ -1,5 +1,5 @@
 </head><body>
-<?php echo '<p><a href="editor">Logi sisse</a></p><hr><br>' ?>
+<?php echo '<p><a href="login">Logi sisse</a></p><hr><br>' ?>
 <?php foreach ($uudis as $news_item): ?>
 
     <h2><a href="news/<?php echo $news_item['uudise_ID'] ?>"><?php echo $news_item['uudise_PEALKIRI'] ?></a></h2>

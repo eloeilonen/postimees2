@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<h1>Postimees 2</h1>
+<h1><a href="<?php echo base_url('/news'); ?>">Postimees 2</a></h1>
 
 <html>
 <head>

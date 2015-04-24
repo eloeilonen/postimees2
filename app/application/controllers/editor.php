@@ -5,7 +5,7 @@ class Editor extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
-		#$this->load->library('session');
+		$this->load->library('session');
 		$this->load->model('editor_model');
 	}
 
@@ -46,7 +46,8 @@ class Editor extends CI_Controller {
 	else
 	{
 		$this->editor_model->set_news();
-		$this->load->view('templates/success');
+		$this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Uudis lisatud!!!</div>');
+        redirect('editor/create');
 	}
 	}
 
