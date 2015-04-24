@@ -4,11 +4,11 @@
 
 <html>
 <head>
-	
+
 	<meta charset="utf-8">
 
 	<title><?php echo $title ?> - Postimees 2</title>
-	
+
 	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
 	<span id="signinButton">
   		<span
@@ -20,6 +20,7 @@
 		    data-scope="https://www.googleapis.com/auth/userinfo.email">
 		</span>
 	</span>
-	
+
+<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 </head>
 <body>
