@@ -18,4 +18,5 @@
 	<?php echo ' | '.$news_stats['count'].'<br>'?>
 <?php endforeach ?>
 
-<?php echo '<br><hr><p><a href="editor/create">Lisa uudis</a></p>' ?>
+
+<?php /*echo '<br><hr><p><a href="editor/create">Lisa uudis</a></p>'  */ ?>

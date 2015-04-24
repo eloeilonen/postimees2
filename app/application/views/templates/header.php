@@ -9,7 +9,6 @@
 
 	<title><?php echo $title ?> - Postimees 2</title>
 
-<!--
 	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
 	<span id="signinButton">
   		<span
@@ -21,7 +20,6 @@
 		    data-scope="https://www.googleapis.com/auth/userinfo.email">
 		</span>
 	</span>
--->
 
 <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.2.js"); ?>"></script>
