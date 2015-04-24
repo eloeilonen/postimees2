@@ -1,3 +1,4 @@
+</head><body>
 <?php echo '<p><a href="editor">Logi sisse</a></p><hr><br>' ?>
 <?php foreach ($uudis as $news_item): ?>
 

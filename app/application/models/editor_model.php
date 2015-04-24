@@ -25,4 +25,23 @@ class Editor_model extends CI_Model {
 
 	return $this->db->insert('uudis', $data);
 	}
+
+	public function get_teema()
+	{
+		$this->db->select('teema_ID');
+        $this->db->select('teema_NIMI');
+        $this->db->from('teema');
+        $query = $this->db->get();
+        $result = $query->result();
+
+		$teema_id = array('-SELECT-');
+        $teema_nimi = array('-SELECT-');
+
+        for ($i = 0; $i < count($result); $i++)
+        {
+            array_push($teema_id, $result[$i]->teema_ID);
+            array_push($teema_nimi, $result[$i]->teema_NIMI);
+        }
+        return $teema_result = array_combine($teema_id, $teema_nimi);
+     }
 }

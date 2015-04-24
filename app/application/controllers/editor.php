@@ -4,6 +4,8 @@ class Editor extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->database();
+		#$this->load->library('session');
 		$this->load->model('editor_model');
 	}
 
@@ -23,7 +25,10 @@ class Editor extends CI_Controller {
 
 	$data['title'] = 'Lisa uudis';
 
+	$data['teema'] = $this->editor_model->get_teema();
+
 	$this->form_validation->set_rules('pealkiri', 'Pealkiri', 'required');
+	$this->form_validation->set_rules('teema', 'Teema', 'required');
 	$this->form_validation->set_rules('lat_coord', 'Pikkuskraad', 'required');
 	$this->form_validation->set_rules('lon_coord', 'Laiuskraad', 'required');
 	$this->form_validation->set_rules('tekst', 'Tekst', 'required');
@@ -43,5 +48,18 @@ class Editor extends CI_Controller {
 		$this->editor_model->set_news();
 		$this->load->view('templates/success');
 	}
+	}
+
+	function combo_check($str)
+	{
+		if ($str == '-SELECT-')
+		{
+			$this->form_validation->set_message('combo_check', 'Valid %s Teema is required');
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
 	}
 }
