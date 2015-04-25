@@ -1,4 +1,3 @@
-</head><body>
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class login_model extends CI_Model
@@ -18,4 +17,5 @@ class login_model extends CI_Model
           return count($query->result());
           //log_message('error', count($query->result()));
      }
-}?>
+}
+?>

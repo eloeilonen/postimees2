@@ -44,7 +44,6 @@ class login extends CI_Controller
                     //log_message('error', 'pw: '.$password);
                     $usr_result = $this->login_model->get_user($username, $password);
                     //log_message('error', $usr_result);
-                    echo  $usr_result;
                     if ($usr_result > 0) //active user record is present
                     {
                          // set the session variables
