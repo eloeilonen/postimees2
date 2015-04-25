@@ -32,6 +32,7 @@ class Editor extends CI_Controller {
 	$this->form_validation->set_rules('lat_coord', 'Pikkuskraad', 'required');
 	$this->form_validation->set_rules('lon_coord', 'Laiuskraad', 'required');
 	$this->form_validation->set_rules('tekst', 'Tekst', 'required');
+	$this->form_validation->set_rules('pilt', 'Pilt', 'required');
 	$this->form_validation->set_rules('eelvaade', 'Eelvaade', 'required');
 	$this->form_validation->set_rules('date', 'Kuupäev', 'required');
 	$this->form_validation->set_rules('autor', 'Autor', 'required');

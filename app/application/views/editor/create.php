@@ -53,6 +53,15 @@
 	<div class="form-group">
 	<div class="row colbox">
 	<div class="col-lg-4 col-sm-4">
+		<label for="pilt" class="control-label">Link uudise pildile</label></div>
+	<div class="col-lg-8 col-sm-8">
+		<input type="pilt" name="pilt" id="pilt" placeholder="http://" class="form-control"/>
+		<span class="text-danger"><?php echo form_error('tekst'); ?></span>
+	</div></div></div>
+
+	<div class="form-group">
+	<div class="row colbox">
+	<div class="col-lg-4 col-sm-4">
 		<label for="eelvaade" class="control-label">Uudise eelvaate tekst</label></div>
 	<div class="col-lg-8 col-sm-8">
 		<textarea id="eelvaade" name='eelvaade' class="form-control" rows="3"></textarea>
@@ -114,4 +123,3 @@
     </div>
     </div>
 </div>
-</form>

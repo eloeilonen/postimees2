@@ -1,10 +1,17 @@
 </head><body>
-<?php
-echo '<h2>'.$news_item['uudise_PEALKIRI'].'</h2>';
-echo $news_item['uudise_TEKST'].'<br>';
-echo 'Autor: '.$news_author['kasutaja_EESNIMI'].' '.$news_author['kasutaja_PERENIMI'].' '.$news_author['kasutaja_EMAIL'].'<br>';
-//echo '<input type="button" name="Edit" value="Muuda"/><br>';
-//echo '<input type="submit" name="Delete" value="Kustuta"<br>';
 
+<p><a href="login">Logi sisse</a></p><hr><br>
+
+<div class="row">
+	<div class="col-sm-8 blog-main">
+		<div class="blog-post">
+			<h2 class="blog-post-title"><?php echo $news_item['uudise_PEALKIRI'] ?></h2>
+			<img src=<?php echo $news_item['uudise_PILT'] ?> alt="Uudise pilt" class="img-thumbnail" style="min-height:500px;height:500px;"></a>
+			<br><br><p class="text-justify"><?php echo $news_item['uudise_TEKST'] ?></p>
+			<hr>
+			<p class="blog-post-meta"><?php echo $news_author['kasutaja_EESNIMI'].' '.$news_author['kasutaja_PERENIMI'].' '.$news_author['kasutaja_EMAIL'] ?></p>
+			<p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p></p>
+		</div>
+	</div>
 
 

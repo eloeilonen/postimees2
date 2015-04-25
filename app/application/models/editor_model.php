@@ -18,6 +18,7 @@ class Editor_model extends CI_Model {
 		'uudise_PEALKIRI' => $this->input->post('pealkiri'),
 		'uudise_EELVAADE' => $this->input->post('eelvaade'),
 		'uudise_TEKST' => $this->input->post('tekst'),
+		'uudise_PILT' => $this->input->post('pilt'),
 		'uudise_KUUPAEV' => $this->input->post('date'),
 		'uudise_LAT_COORD' => $this->input->post('lat_coord'),
 		'uudise_LON_COORD' => $this->input->post('lon_coord')

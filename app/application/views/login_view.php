@@ -10,7 +10,7 @@
 </head><body>
 <div class="container">
      <div class="row">
-          <div class="col-lg-4 col-sm-4 well">
+          <div class="col-sm-offset-0 col-lg-4 col-sm-4 well">
           <?php
           $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");
           echo form_open("login/index", $attributes);?>
