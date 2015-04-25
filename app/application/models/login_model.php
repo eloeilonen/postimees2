@@ -13,9 +13,9 @@ class login_model extends CI_Model
      function get_user($usr, $pwd)
      {
           $sql = "select * from kasutaja where kasutaja_USERNAME = '" . $usr . "' and kasutaja_PASSWORD = '" .$pwd . "';";
-          log_message('error', $sql);
+          //log_message('error', $sql);
           $query = $this->db->query($sql);
           return count($query->result());
-          log_message('error', count($query->result()));
+          //log_message('error', count($query->result()));
      }
 }?>
