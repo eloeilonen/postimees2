@@ -1,9 +1,11 @@
 </head><body>
 
-<p><a href="login">Logi sisse</a></p><hr><br>
+<p><a href="login">Logi sisse</a></p>
 
-<div class="row">
-	<div class="col-sm-8 blog-main">
+<hr>
+
+<div class="row">s
+	<div id="uudised" class="col-sm-8 blog-main">
 
 <?php foreach ($uudis as $news_item): ?>
 		<div class="blog-post">
