@@ -10,7 +10,7 @@
 			<br><br><p class="text-justify"><?php echo $news_item['uudise_TEKST'] ?></p>
 			<hr>
 			<p class="blog-post-meta"><?php echo $news_author['kasutaja_EESNIMI'].' '.$news_author['kasutaja_PERENIMI'].' '.$news_author['kasutaja_EMAIL'] ?></p>
-			<p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p></p>
+			<p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p>
 		</div>
 	</div>
 
