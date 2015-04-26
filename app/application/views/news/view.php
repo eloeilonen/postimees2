@@ -1,4 +1,4 @@
-<body>
+</head><body>
 
 <p><a href="<?php echo base_url()?>login">Logi sisse</a></p><hr><br>
 
