@@ -20,6 +20,7 @@
 						+'<br><p class="blog-post-meta"><p class="text-right">' + val.uudise_KUUPAEV + '</p></p>'
 						+'<hr>'
 						+'</div>');
+						window.history.pushState(data, val.uudise_PEALKIRI , "#" + val.uudise_ID);
 					}
 				});
 				$.each(uued_uudised, function( index, value ) {

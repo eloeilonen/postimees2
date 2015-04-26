@@ -19,6 +19,13 @@ class News_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function get_limited_news($limit, $start)
+	{
+		$this->db->limit($limit, $start);
+		$results = $this->get_news();
+		return $results;
+	}
+
 	public function get_author($id)
 	{
 		$query = $this->db->query('select kasutaja.kasutaja_EESNIMI, kasutaja.kasutaja_PERENIMI, kasutaja.kasutaja_EMAIL from uudis inner join kasutaja where uudis.autori_ID = kasutaja.kasutaja_id and uudis.uudise_ID = '.$id.';');
