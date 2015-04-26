@@ -1,7 +1,7 @@
 <meta data-name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 
-     <style type="text/css">
+     
      .colbox {
           margin-left: 0px;
           margin-right: 0px;
