@@ -9,8 +9,6 @@
     }
     </style>
 
-</head>
-<body>
 <?php echo validation_errors(); ?>
 
 <div class="container">
