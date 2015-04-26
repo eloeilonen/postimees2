@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.2.js"); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url("assets/js/ajaxCall.js"); ?>"></script>
 
 	<div id="postimees2" class="container">
 	<div class="jumbotron" style="background-color:lavender;">

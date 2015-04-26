@@ -41,6 +41,7 @@
 $route['404_override'] = '';
 $route['news/(:any)'] = 'news/view/$1';
 $route['default_controller'] = 'news';
+$route['news/json'] = 'news/json';
 $route['editor'] = 'editor';
 $route['create'] = 'create';
 $route['login'] = 'login';
