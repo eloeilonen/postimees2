@@ -7,12 +7,15 @@
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.2.js"); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
-
+	 <META HTTP-EQUIV="cache-control" CONTENT="public">
+</head>
+<body>
 	<div id="postimees2" class="container">
 	<div class="jumbotron" style="background-color:lavender;">
 		<h1><a href="<?php echo base_url('/news'); ?>">Postimees 2</a></h1>
 		<p>Veebirakenduste loomine 2014/15 kevad</p>
 	</div>
+	
 
 <!--
 	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
