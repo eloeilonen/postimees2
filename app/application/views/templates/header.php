@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.2.js"); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
 	 <META HTTP-EQUIV="cache-control" CONTENT="public">
+	 <meta http-equiv="expires" content="<?= date('d M Y H:i:s', time() + (7 * 24 * 60 * 60)) ?> GMT">
 </head>
 <body>
 	<div id="postimees2" class="container">
@@ -15,6 +16,8 @@
 		<h1><a href="<?php echo base_url('/news'); ?>">Postimees 2</a></h1>
 		<p>Veebirakenduste loomine 2014/15 kevad</p>
 	</div>
+
+	
 	
 
 <!--
