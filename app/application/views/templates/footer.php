@@ -1,3 +1,5 @@
+</div>
+
 <div class="container">
 	<br><hr>
 	<p class="text-muted text-center">Veebirakenduste loomine Kevad 2015 | Meeskond - Postimees2</p>
