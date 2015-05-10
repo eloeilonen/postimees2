@@ -1,4 +1,3 @@
-<p><a href="login">Logi sisse</a></p>
 <script type="text/javascript" src="<?php echo base_url("assets/js/ajaxCall.js"); ?>"></script>
 
 <hr>
