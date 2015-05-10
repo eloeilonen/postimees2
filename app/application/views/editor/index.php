@@ -1,4 +1,3 @@
-</head><body>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-offset-0 col-lg-4 col-sm-4 well">

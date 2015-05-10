@@ -1,6 +1,3 @@
-</head><body>
-
-<p><a href="login">Logi sisse</a></p>
 <script type="text/javascript" src="<?php echo base_url("assets/js/ajaxCall.js"); ?>"></script>
 
 <hr>
@@ -17,7 +14,7 @@
 				</div>
 			<p class="text-justify"><?php echo $news_item['uudise_EELVAADE']?></p>
 			</div>
-			<br><p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p></p>
+			<br><p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p>
 			<hr>
 		</div>
 <?php endforeach ?>
