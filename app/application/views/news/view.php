@@ -1,7 +1,3 @@
-<!--
-<p><a href="<?php echo base_url()?>login">Logi sisse</a></p><hr><br>
--->
-
 <div class="row">
 	<div class="col-sm-8 blog-main">
 		<div class="blog-post">
