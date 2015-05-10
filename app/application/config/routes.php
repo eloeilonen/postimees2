@@ -44,6 +44,7 @@ $route['default_controller'] = 'news';
 $route['news/json'] = 'news/json';
 $route['editor'] = 'editor';
 $route['create'] = 'create';
+$route['update/(:any)'] = 'update/$1';
 $route['login'] = 'login';
 
 /* End of file routes.php */
