@@ -10,7 +10,7 @@ class base_controller extends CI_Controller
             // Brandon
             '808877592535768',
             // Elo
-            '660787429',
+            '10153304215197430',
         );
         parent::__construct();
         $this->load->database();
@@ -22,6 +22,7 @@ class base_controller extends CI_Controller
 
         // If user is set then get profile info
         $this->fb_user = $this->facebook->getUser() ? $this->facebook->api('/me/') : false;
+        var_export($this->fb_user);
         $this->isAuthenticated = (array_search($this->fb_user['id'], $this->authenticatedUsers) !== false) ? 'true' : false;
     }
 
