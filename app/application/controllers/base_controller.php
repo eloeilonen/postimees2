@@ -22,7 +22,7 @@ class base_controller extends CI_Controller
 
     public function checkAuth() {
         if ($this->isAuthenticated == false) {
-            echo '<center><img src="http://i.imgur.com/pZ96Rxa.png" /></center>';
+            echo '<!DOCTYPE html><center><img src="http://i.imgur.com/pZ96Rxa.png" /></center>';
             die();
         }
     }
