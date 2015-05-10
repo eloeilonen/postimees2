@@ -19,7 +19,7 @@ class fb_login extends base_controller
             redirect(
                 $this->facebook->getLoginUrl(
                     array('scope'        => 'email',
-                          'redirect_uri' => 'http://postimees2-test.tech-thing.org/'.$_GET['redirect'])
+                          'redirect_uri' => base_url().$_GET['redirect'])
                 )
             );
         }
