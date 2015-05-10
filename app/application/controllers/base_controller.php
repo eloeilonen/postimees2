@@ -9,6 +9,8 @@ class base_controller extends CI_Controller
         $this->authenticatedUsers = array(
             // Brandon
             '808877592535768',
+            // Elo
+            '660787429'
         );
         parent::__construct();
         $this->load->database();
