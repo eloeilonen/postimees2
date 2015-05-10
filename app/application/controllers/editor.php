@@ -1,11 +1,11 @@
 <?php
-class Editor extends CI_Controller {
+
+require_once 'base_controller.php';
+class Editor extends base_controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->database();
-		$this->load->library('session');
 		$this->load->model('editor_model');
 	}
 
