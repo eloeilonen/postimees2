@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-1.11.2.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
+    <!--
     <META HTTP-EQUIV="cache-control" CONTENT="public">
     <meta http-equiv="expires" content="<?= gmdate('D, d M Y H:i:s', time() + (60 * 60 * 24 * 45)) . ' GMT' ?> GMT">
+    -->
 </head>
 <body>
 
