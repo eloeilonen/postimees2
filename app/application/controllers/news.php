@@ -1,7 +1,5 @@
 <?php
-
-require_once 'base_controller.php';
-class News extends base_controller {
+class News extends CI_Controller {
 
 	public function __construct()
 	{
