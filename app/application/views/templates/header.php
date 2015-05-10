@@ -48,7 +48,7 @@
                         </ul>
                     </li>
                 <?php else: ?>
-                    <li><a href="<?= base_url('fb_login') ?>"><i class="fa fa-facebook"></i> logi sisse</a></li>
+                    <li><a href="<?= base_url('fb_login?redirect='.get_instance()->uri->uri_string()) ?>"><i class="fa fa-facebook"></i> logi sisse</a></li>
                 <?php endif; ?>
             </ul>
         </div>
