@@ -1,6 +1,7 @@
 <?php
 
-class base_controller extends CI_Controller {
+class base_controller extends CI_Controller
+{
 
     protected $authenticatedUsers;
 
@@ -20,7 +21,7 @@ class base_controller extends CI_Controller {
     }
 
     public function checkAuth() {
-        if($this->isAuthenticated == false) {
+        if ($this->isAuthenticated == false) {
             echo '<center><img src="http://i.imgur.com/pZ96Rxa.png" /></center>';
             die();
         }

@@ -3,6 +3,7 @@
 }
 
 require_once 'base_controller.php';
+
 class fb_login extends base_controller
 {
 
@@ -14,7 +15,13 @@ class fb_login extends base_controller
         if ($this->fb_user) {
             redirect(base_url());
         } else {
-            redirect($this->facebook->getLoginUrl(array('scope' => 'email')));
+            $CI =& get_instance();
+            redirect(
+                $this->facebook->getLoginUrl(
+                    array('scope'        => 'email',
+                          'redirect_uri' => 'http://postimees2-test.tech-thing.org/'.$CI->uri->uri_string())
+                )
+            );
         }
     }
 
