@@ -24,6 +24,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?= base_url() ?>">Postimees 2</a>
+            <?php if($this->isAuthenticated): ?><a class="navbar-brand" href="<?= base_url('editor/index') ?>">Toimetaja</a><?php endif; ?>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,7 +42,7 @@
                                     <li><?= $this->fb_user['name'] ?></li>
                                     <li><?= $this->fb_user['email'] ?></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?= base_url('fb_login/logout') ?>">logi v‰lja</a></li>
+                                    <li><a href="<?= base_url('fb_login/logout') ?>">logi v√§lja</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -55,15 +56,6 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
-<?php
-
-if(! empty($this->fb_user['id']) AND $this->isAuthenticated == false) {
-    echo '<center><img src="http://i.imgur.com/pZ96Rxa.png" /></center>';
-    die();
-}
-
-?>
 
 <?php if (isset($_SESSION['messages'])): ?>
     <div class="alert alert-danger">

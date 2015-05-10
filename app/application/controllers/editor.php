@@ -6,6 +6,7 @@ class Editor extends base_controller {
 	public function __construct()
 	{
 		parent::__construct();
+        $this->checkAuth();
 		$this->load->model('editor_model');
 	}
 
