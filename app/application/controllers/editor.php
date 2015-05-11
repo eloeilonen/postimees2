@@ -110,7 +110,7 @@ class Editor extends base_controller {
                 'autori_ID' => $this->input->post('autor'),
             );
 
-            //update employee record
+            //update news record
             $this->db->where('uudise_ID', $id);
             $this->db->update('uudis', $data);
 

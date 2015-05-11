@@ -46,8 +46,6 @@ class Editor_model extends CI_Model {
         return $teema_result = array_combine($teema_id, $teema_nimi);
      }
 
-
-    //fetch employee record by employee no
 	function get_news_record($id)
     {
         $this->db->where('uudise_ID', $id);

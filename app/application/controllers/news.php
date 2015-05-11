@@ -6,7 +6,7 @@ class News extends base_controller {
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->helper('url');
+		$this->load->helper('url');
 		//$this->load->library('pagination');
 
 		$this->load->model('news_model');
@@ -76,12 +76,18 @@ class News extends base_controller {
 		$this->load->view('news/view', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/footer');
+
 	}
 
 	public function json()
 	{
 		$result = $this->news_model->get_news();
 		echo json_encode($result);
+	}
+
+	public function delete($id) {
+		$this->news_model->delete_news($id);
+		redirect(base_url());
 	}
 }
 ?>
