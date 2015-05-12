@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="offline.appcache">
 <head>
     <link href="<?php echo base_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <meta http-equiv="expires" content="<?= gmdate('D, d M Y H:i:s', time() + (60 * 60 * 24 * 45)) . ' GMT' ?> GMT">
     -->
 </head>
+
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -43,7 +44,7 @@
                                     <li><?= $this->fb_user['name'] ?></li>
                                     <li><?= $this->fb_user['email'] ?></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?= base_url('fb_login/logout') ?>">logi välja</a></li>
+                                    <li><a href="<?= base_url('fb_login/logout') ?>">Logi välja</a></li>
                                 </ul>
                             </li>
                         </ul>

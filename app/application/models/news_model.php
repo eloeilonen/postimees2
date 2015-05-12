@@ -41,8 +41,31 @@ class News_model extends CI_Model {
 		}
 	}
 
-	public function delete_news($id) {
+	public function delete_news($id)
+	{
 		$this->db->where('uudise_ID', $id);
 		$this->db->delete('uudis');
+		$this->db->where('kommentaari_uudise_ID', $id);
+		$this->db->delete('kommentaar');
+	}
+
+	public function set_comment()
+	{
+	$data = array(
+		'kommentaari_uudise_ID' => $this->input->post('id'),
+		'kommenteerija_NIMI' => $this->input->post('nimi'),
+		'kommenteerija_EMAIL' => $this->input->post('email'),
+		'kommentaari_TEKST' => $this->input->post('kommentaar'),
+		'kommentaari_KUUPAEV' => $this->input->post('date')
+	);
+
+	return $this->db->insert('kommentaar', $data);
+	}
+
+	public function get_comments($id)
+	{
+		$this->db->order_by('kommentaari_KUUPAEV', 'DESC');
+		$query = $this->db->get_where('kommentaar', array('kommentaari_uudise_ID' => $id));
+		return $query->result_array();
 	}
 }

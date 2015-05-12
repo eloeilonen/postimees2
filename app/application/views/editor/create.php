@@ -120,4 +120,3 @@
         <?php echo $this->session->flashdata('msg'); ?>
     </div>
     </div>
-</div>

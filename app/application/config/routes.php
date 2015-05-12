@@ -39,9 +39,10 @@
 */
 
 $route['404_override'] = '';
+$route['default_controller'] = 'news';
 $route['news/(:any)'] = 'news/view/$1';
 $route['delete/(:any)'] = 'news/delete/$1';
-$route['default_controller'] = 'news';
+$route['news/comment'] = 'news/comment';
 $route['news/json'] = 'news/json';
 $route['editor'] = 'editor';
 $route['create'] = 'create';

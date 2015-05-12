@@ -7,4 +7,3 @@
 			<p><a href="<?php echo base_url('/news'); ?>">Uudised</a></p>
 		</div>
 	</div>
-</div>

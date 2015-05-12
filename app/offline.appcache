@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+index.php
+/application/index.html
+/assets/css/bootstrap.min.css
+/assets/css/bootstrap.css
+/assets/js/jquery-1.11.2.js
+/assets/js/bootstrap.js
+
+NETWORK:
+*

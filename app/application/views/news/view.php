@@ -16,6 +16,7 @@ function confirmDialog() {
 			<?php if($this->isAuthenticated): ?><p class="blog-post-meta"><a href="<?php echo base_url()?>editor/update/<?php echo $news_item['uudise_ID']?>">Muuda</a>
 			<a href="<?php echo base_url() ?>delete/<?php echo $news_item['uudise_ID']?>" onclick="return confirmDialog();">Kustuta</a></p><?php endif; ?>
 		</div>
-	</div>
+
+
 
 
