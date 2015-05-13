@@ -59,7 +59,7 @@ class News extends base_controller {
 		redirect(base_url());
 	}
 
-	public function comment()
+	public function comment($id)
 	{
 	$this->form_validation->set_rules('nimi', 'Nimi', 'required|xss_clean');
 	$this->form_validation->set_rules('email', 'Email', 'required|xss_clean');
@@ -67,13 +67,13 @@ class News extends base_controller {
 
 	if ($this->form_validation->run() === FALSE)
 	{
-		echo "kommentaari lisamine ebaõnnestus";
+		$this->view($id);
 	}
 	else
 	{
 		$this->news_model->set_comment();
 		$this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Kommentaar lisatud!!!</div>');
-		echo "Kommentaar lisatud!!!";
+		redirect('news/'.$id);
 	}
 	}
 }

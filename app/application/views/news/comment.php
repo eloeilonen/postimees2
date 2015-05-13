@@ -2,7 +2,7 @@
 		<hr>
 		<h4>Kommenteeri uudist</h4>
 		<?php $attributes = array("class" => "form-horizontal", "id" => "addform", "name" => "addform");
-		echo form_open('news/comment', $attributes);?>
+		echo form_open('comment/'.$news_item['uudise_ID'], $attributes);?>
 		<div class="well">
 				<form role="form">
 					<div class="form-group">
