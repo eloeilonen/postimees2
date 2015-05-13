@@ -51,15 +51,26 @@ class News_model extends CI_Model {
 
 	public function set_comment()
 	{
-	$data = array(
-		'kommentaari_uudise_ID' => $this->input->post('id'),
-		'kommenteerija_NIMI' => $this->input->post('nimi'),
-		'kommenteerija_EMAIL' => $this->input->post('email'),
-		'kommentaari_TEKST' => $this->input->post('kommentaar'),
-		'kommentaari_KUUPAEV' => $this->input->post('date')
-	);
+		$data = array(
+			'kommentaari_uudise_ID' => $this->input->post('id'),
+			'kommenteerija_NIMI' => $this->input->post('nimi'),
+			'kommenteerija_EMAIL' => $this->input->post('email'),
+			'kommentaari_TEKST' => $this->input->post('kommentaar'),
+			'kommentaari_KUUPAEV' => $this->input->post('date')
+		);
 
-	return $this->db->insert('kommentaar', $data);
+		$uudiskirjad = $this->input->post("uudiskirjad");
+		$email = $this->input->post('email');
+
+		if ($uudiskirjad)
+		{
+			if (count($this->get_email($email)) === 0)
+			{
+				$this->set_kirjatellija();
+			}
+		}
+
+		return $this->db->insert('kommentaar', $data);
 	}
 
 	public function get_comments($id)
@@ -68,4 +79,21 @@ class News_model extends CI_Model {
 		$query = $this->db->get_where('kommentaar', array('kommentaari_uudise_ID' => $id));
 		return $query->result_array();
 	}
+
+	public function set_kirjatellija()
+	{
+		$data = array(
+		'tellija_EMAIL' => $this->input->post('email'),
+		'tellija_NIMI' => $this->input->post('nimi')
+		);
+
+		return $this->db->insert('uudiskirja_tellijad', $data);
+	}
+
+	public function get_email($email)
+	{
+		$query = $this->db->get_where('uudiskirja_tellijad', array('tellija_EMAIL' => $email));
+		return $query->result_array();
+	}
+
 }

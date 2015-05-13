@@ -72,7 +72,7 @@
 	<div class="col-lg-4 col-sm-4">
 		<label for="lat_coord" class="control-label">Asukoha pikkuskraad</label></div>
 	<div class="col-lg-8 col-sm-8">
-		<input type="number" id="lat_coord" name="lat_coord" value="58.378355" type="text" class="form-control"  value="<?php echo set_value('lat_coord'); ?>" />
+		<input type="text" id="lat_coord" name="lat_coord" placeholder="58.378355" type="text" class="form-control"  value="<?php echo set_value('lat_coord'); ?>" />
 		<span class="text-danger"><?php echo form_error('lat_coord'); ?></span>
 	</div></div></div>
 	<div class="form-group">
@@ -80,7 +80,7 @@
 	<div class="col-lg-4 col-sm-4">
 		<label for="lon_coord" class="control-label">Asukoha laiuskraad</label></div>
 	<div class="col-lg-8 col-sm-8">
-		<input type="number" id="lon_coord" name="lon_coord" value="26.714663" type="text" class="form-control"  value="<?php echo set_value('lon_coord'); ?>" />
+		<input type="text" id="lon_coord" name="lon_coord" placeholder="26.714663" type="text" class="form-control"  value="<?php echo set_value('lon_coord'); ?>" />
 		<span class="text-danger"><?php echo form_error('lon_coord'); ?></span>
 	</div></div></div>
 

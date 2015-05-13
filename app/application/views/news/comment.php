@@ -7,7 +7,7 @@
 				<form role="form">
 					<div class="form-group">
 						<input type="hidden" id="id" name="id" value="<?php echo $news_item['uudise_ID']?>">
-						<input type="hidden" id="date" name="date" value="2015-05-11">
+						<input type="hidden" id="date" name="date" value="<?php echo date("Y-m-d") ?>">
 						<label for="pwd">Nimi:</label>
 						<input id="nimi" name="nimi" placeholder="Sinu nimi" type="text" class="form-control" value="<?php echo set_value('nimi'); ?>" />
 						<span class="text-danger"><?php echo form_error('nimi'); ?></span>
@@ -17,7 +17,7 @@
 						<label for="pwd">Kommentaar:</label>
 						<textarea id="kommentaar" name="kommentaar" class="form-control" rows="3"></textarea>
 						<span class="text-danger"><?php echo form_error('kommentaar'); ?></span>
-						<label><input id="uudiskirjad" type="checkbox" value="">Soovin saada Postimees2 uudiskirju.</label><br>
+						<input type="checkbox" id="uudiskirjad" name="uudiskirjad" value="uudiskirjad"><label>Soovin saada Postimees2 uudiskirju.</label><br>
 						<button class="btn btn-primary" type="submit">Lisa</button>
 					</div>
 				</form>
@@ -27,12 +27,12 @@
 		<hr>
 		<?php foreach ($comment as $comm): ?>
 			<div class="media">
-				<div class="media-body"><?php echo $comm['kommenteerija_NIMI'] ?>
+				<div class="media-body well"><?php echo $comm['kommenteerija_NIMI'] ?>
 					<h4 class="media-heading">
 					<small><?php echo $comm['kommentaari_KUUPAEV'] ?></small></h4>
 					<p class="text-justify"><?php echo $comm['kommentaari_TEKST'] ?></p>
-					<hr>
 				</div>
+				<hr>
 			</div>
 		<?php endforeach ?>
 	</div>

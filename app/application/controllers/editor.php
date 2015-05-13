@@ -13,9 +13,11 @@ class Editor extends base_controller {
 	public function index()
 	{
 		$data['title'] = 'Toimetaja toimingud';
+		$data['tellijad'] = $this->editor_model->get_kirjatellijad();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('editor/index');
+		$this->load->view('editor/tellijad');
 		$this->load->view('templates/footer');
 	}
 
@@ -118,5 +120,12 @@ class Editor extends base_controller {
             $this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Uudis edukalt uuendatud!</div>');
             redirect('editor/update/' . $id);
         }
+	}
+
+	public function delete_tellija($id)
+	{
+		$this->editor_model->delete_tellija($id);
+		$this->session->set_flashdata('msg', '<div class="alert alert-success text-center">Uudiskirja tellija kustutatud!</div>');
+		redirect('editor/index');
 	}
 }

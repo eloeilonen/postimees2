@@ -9,6 +9,7 @@ class News extends base_controller {
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+		$this->load->library('googlemaps');
 
 		$this->load->model('news_model');
 	}
@@ -32,6 +33,21 @@ class News extends base_controller {
 		$data['news_author'] = $this->news_model->get_author($id);
 		$data['news_stats'] = $this->news_model->get_commentCount();
 		$data['comment'] = $this->news_model->get_comments($id);
+
+		$lat = $data['news_item']['uudise_LAT_COORD'];
+		$lon = $data['news_item']['uudise_LON_COORD'];
+
+		$config['zoom'] = 'auto';
+		$config['maxzoom'] = 19;
+		$config['minzoom'] = 3;
+
+		$this->googlemaps->initialize($config);
+
+		$marker = array();
+		$marker['position'] = $lat.', '.$lon;
+		$this->googlemaps->add_marker($marker);
+
+		$data['map'] = $this->googlemaps->create_map();
 
 		if (empty($data['news_item']))
 		{
@@ -61,9 +77,9 @@ class News extends base_controller {
 
 	public function comment($id)
 	{
-	$this->form_validation->set_rules('nimi', 'Nimi', 'required|xss_clean');
-	$this->form_validation->set_rules('email', 'Email', 'required|xss_clean');
-	$this->form_validation->set_rules('kommentaar', 'Kommentaar', 'required');
+		$this->form_validation->set_rules('nimi', 'Nimi', 'required|xss_clean');
+		$this->form_validation->set_rules('email', 'Email', 'required|xss_clean|valid_email');
+		$this->form_validation->set_rules('kommentaar', 'Kommentaar', 'required|xss_clean');
 
 	if ($this->form_validation->run() === FALSE)
 	{

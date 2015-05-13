@@ -53,4 +53,16 @@ class Editor_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function get_kirjatellijad()
+	{
+		$query = $this->db->get('uudiskirja_tellijad');
+		return $query->result();
+	}
+
+	function delete_tellija($id)
+    {
+        $this->db->where('tellija_ID', $id);
+        $this->db->delete('uudiskirja_tellijad');
+    }
 }
