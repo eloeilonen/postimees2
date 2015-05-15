@@ -1,4 +1,5 @@
         <div class="col-md-7">
+			<h4>Uudiskirjade tellijad</h4>
             <table class="table table-striped table-hover well">
                 <thead>
                     <tr class="bg-primary">
