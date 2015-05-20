@@ -18,9 +18,9 @@ class base_controller extends CI_Controller
         $this->load->database();
         $this->load->library('session');
         // dev
-        //$this->load->library('facebook', array('appId' => '420031188176912', 'secret' => 'c064fa8d54d8518d040874c4384caf2e', 'cookie' => true));
+        $this->load->library('facebook', array('appId' => '420031188176912', 'secret' => 'c064fa8d54d8518d040874c4384caf2e', 'cookie' => true));
         // test
-        $this->load->library('facebook', array('appId' => '418927931620571', 'secret' => '1cdb542937f1e2ea48fcb9955b7540b5', 'cookie' => true,));
+        //$this->load->library('facebook', array('appId' => '418927931620571', 'secret' => '1cdb542937f1e2ea48fcb9955b7540b5', 'cookie' => true,));
 
         // If user is set then get profile info
         try

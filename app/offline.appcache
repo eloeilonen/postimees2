@@ -1,12 +1,11 @@
 CACHE MANIFEST
-
 CACHE:
 index.php
-/application/index.html
+/application/views/templates/cache_header.php
+/application/views/templates/footer.php
+/application/views/templates/sidebar.php
+/application/views/news/index.php
 /assets/css/bootstrap.min.css
 /assets/css/bootstrap.css
 /assets/js/jquery-1.11.2.js
 /assets/js/bootstrap.js
-
-NETWORK:
-*

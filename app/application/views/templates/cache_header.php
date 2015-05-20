@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
+<html manifest="<?php echo base_url('/offline.appcache'); ?>">
 <head>
     <link href="<?php echo base_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
