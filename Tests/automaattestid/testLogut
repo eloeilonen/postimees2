@@ -4,54 +4,33 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://postimees2-test.tech-thing.org/" />
-<title>testNavigeerimine</title>
+<title>testLogout</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">testNavigeerimine</td></tr>
+<tr><td rowspan="1" colspan="3">testLogout</td></tr>
 </thead><tbody>
 <tr>
-	<td>open</td>
-	<td>/</td>
+	<td>click</td>
+	<td>link=Postimees VL</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=logi välja</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Postimees 2</td>
+	<td>link=logi välja</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='23']/h2/a</td>
+	<td>assertElementPresent</td>
+	<td>link=logi sisse</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Postimees 2</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='23']/div/div/a/img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//div[@id='postimees2']/div[2]/div[2]/div/ol/li/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Postimees 2</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertTitle</td>
-	<td>Postimees 2 uudised - Postimees 2</td>
-	<td></td>
-</tr>
-
 </tbody></table>
 </body>
 </html>

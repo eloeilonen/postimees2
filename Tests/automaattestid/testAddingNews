@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://postimees2-test.tech-thing.org/" />
+<title>testAddingNews</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">testAddingNews</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://postimees2-test.tech-thing.org/editor/create</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pealkiri</td>
+	<td>Selenium IDE test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=teema</td>
+	<td>label=Eesti</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=tekst</td>
+	<td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=eelvaade</td>
+	<td>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lat_coord</td>
+	<td>58.378355</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lon_coord</td>
+	<td>26.714663</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=date</td>
+	<td>2015-05-19</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pilt</td>
+	<td>http://y.delfi.ee/norm/31245/1172425_evDSS6.jpeg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btn_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='postimees2']/div[2]/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://postimees2-test.tech-thing.org/news</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Selenium IDE test</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

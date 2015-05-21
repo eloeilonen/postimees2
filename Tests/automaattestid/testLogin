@@ -4,67 +4,47 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://postimees2-test.tech-thing.org/" />
-<title>testUudiseLisamine</title>
+<title>testLogin</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">testUudiseLisamine</td></tr>
+<tr><td rowspan="1" colspan="3">testLogin</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/editor/index</td>
+	<td>http://postimees2-test.tech-thing.org</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Lisa uudis</td>
+	<td>link=logi sisse</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=pealkiri</td>
-	<td>Testuudis</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=teema</td>
-	<td>label=Eesti</td>
+	<td>id=email</td>
+	<td>postimees2vl@gmail.com</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=tekst</td>
-	<td>Testuudise tekst</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=pilt</td>
-	<td>http://web.zone.ee/patagooniapildid/images/Asti%20pildid%202008-L.-Am%20003.jpg</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=eelvaade</td>
-	<td>Testuudise eelvaade</td>
+	<td>id=pass</td>
+	<td>test12345</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=date</td>
+	<td>id=u_0_2</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=31</td>
+	<td>waitForElementPresent</td>
+	<td>link=Postimees VL</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=btn_add</td>
+	<td>assertElementPresent</td>
+	<td>link=Postimees VL</td>
 	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//div[@id='postimees2']/div[2]/div/div/div</td>
-	<td>Uudis lisatud!!!</td>
 </tr>
 
 </tbody></table>

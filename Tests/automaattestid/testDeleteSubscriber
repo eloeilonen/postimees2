@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://postimees2-test.tech-thing.org/" />
-<title>testToimetajaLogin</title>
+<title>testDeleteSubscriber</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">testToimetajaLogin</td></tr>
+<tr><td rowspan="1" colspan="3">testDeleteSubscriber</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -18,28 +18,18 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Logi sisse</td>
+	<td>link=Toimetaja</td>
 	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=txt_username</td>
-	<td>kasutaja3</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=txt_password</td>
-	<td>parool3</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=btn_login</td>
+	<td>link=Kustuta</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertText</td>
-	<td>css=h2</td>
-	<td>Toimetaja toimingud</td>
+	<td>assertElementPresent</td>
+	<td>//div[@id='postimees2']/div[2]/div/div[2]/div</td>
+	<td></td>
 </tr>
 
 </tbody></table>

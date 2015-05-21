@@ -7,3 +7,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
 
 AddType text/cache-manifest .appcache
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
