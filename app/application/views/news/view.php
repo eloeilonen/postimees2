@@ -14,8 +14,8 @@ function confirmDialog() {
 			<h4>Uudise asukoht</h4>
 			<?php echo $map['html']; ?>
 			<hr>
-			<p class="blog-post-meta"><?php echo $news_author['kasutaja_EESNIMI'].' '.$news_author['kasutaja_PERENIMI'].' ' ?> <a href="mailto:"<?php echo $news_author['kasutaja_EMAIL'] ?>><?php echo $news_author['kasutaja_EMAIL'] ?></a></p>
-			<p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p></p>
+			<p class="blog-post-meta"><?php echo $news_author['kasutaja_EESNIMI'].' '.$news_author['kasutaja_PERENIMI'].' ' ?> <a href="mailto:"><?php echo $news_author['kasutaja_EMAIL'] ?></a></p>
+			<p class="blog-post-meta"><p class="text-right"><?php echo $news_item['uudise_KUUPAEV']?></p>
 			<?php if($this->isAuthenticated): ?><p class="blog-post-meta"><a href="<?php echo base_url()?>editor/update/<?php echo $news_item['uudise_ID']?>">Muuda</a>
 			<a href="<?php echo base_url() ?>delete/<?php echo $news_item['uudise_ID']?>" onclick="return confirmDialog();">Kustuta</a></p><?php endif; ?>
 		</div>
