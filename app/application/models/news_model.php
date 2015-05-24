@@ -41,6 +41,15 @@ class News_model extends CI_Model {
 		}
 	}
 
+	public function get_viewCount($id = FALSE)
+	{
+		if ($id === FALSE)
+		{
+			$query = $this->db->query('select uudise_ID, uudise_PEALKIRI, uudise_vaatamised from uudis where uudise_vaatamised > 0 order by uudise_vaatamised desc limit 10;');
+			return $query->result_array();
+		}
+	}
+
 	public function delete_news($id)
 	{
 		$this->db->where('uudise_ID', $id);
