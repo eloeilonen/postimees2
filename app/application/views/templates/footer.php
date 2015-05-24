@@ -1,3 +1,4 @@
+</div>
 	</div>
 		<footer class="blog-footer">
 			<br><hr>

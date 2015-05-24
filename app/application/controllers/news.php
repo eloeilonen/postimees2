@@ -20,10 +20,12 @@ class News extends base_controller {
 
 		$data['uudis'] = $this->news_model->get_news();
 		$data['news_stats'] = $this->news_model->get_commentCount();
+		$data['news_stats2'] = $this->news_model->get_viewCount();
 
 		$this->load->view('templates/cache_header', $data);
 		$this->load->view('news/index', $data);
 		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/sidebar2', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -32,6 +34,7 @@ class News extends base_controller {
 		$data['news_item'] = $this->news_model->get_news($id);
 		$data['news_author'] = $this->news_model->get_author($id);
 		$data['news_stats'] = $this->news_model->get_commentCount();
+		$data['news_stats2'] = $this->news_model->get_viewCount();
 		$data['comment'] = $this->news_model->get_comments($id);
 
 		$lat = $data['news_item']['uudise_LAT_COORD'];
@@ -55,11 +58,14 @@ class News extends base_controller {
 		}
 
 		$data['title'] = $data['news_item']['uudise_PEALKIRI'];
+		$data['views'] = $data['news_item']['uudise_VAATAMISED'];
+		
 
 		$this->load->view('templates/cache_header', $data);
 		$this->load->view('news/view', $data);
 		$this->load->view('news/comment', $data);
 		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/sidebar2', $data);
 		$this->load->view('templates/footer');
 	}
 

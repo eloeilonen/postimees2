@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="<?php echo base_url('/offline.appcache'); ?>">
+<html>
 <head>
     <link href="<?php echo base_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
     <meta charset="utf-8">
@@ -12,7 +12,6 @@
     <meta http-equiv="expires" content="<?= gmdate('D, d M Y H:i:s', time() + (60 * 60 * 24 * 45)) . ' GMT' ?> GMT">
     -->
 </head>
-
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -35,16 +34,16 @@
                 <?php if (!empty($this->fb_user['id'])): ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <img src="https://graph.facebook.com/<?= $this->fb_user['id'] ?>/picture" height="20px" width="20px">
+                            <img src="https://graph.facebook.com/<?= $this->fb_user['id'] ?>/picture" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/100px-No_image_available.svg.png" height="20" width="20">
                             <?= $this->fb_user['name'] ?><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li style="width: 300px">
-                                <img class="pull-left thumbnail" style="margin: 10px" src="https://graph.facebook.com/<?= $this->fb_user['id'] ?>/picture?type=large" height="100px" width="100px">
-                                <ul class="pull-left nav" style="margin: 10px">
+                            <li style="width: 300">
+                                <img class="pull-left thumbnail" style="margin: 10" src="https://graph.facebook.com/<?= $this->fb_user['id'] ?>/picture?type=large" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/100px-No_image_available.svg.png" height="100" width="100">
+                                <ul class="pull-left nav" style="margin: 10">
                                     <li><?= $this->fb_user['name'] ?></li>
                                     <li><?= $this->fb_user['email'] ?></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?= base_url('fb_login/logout') ?>">Logi välja</a></li>
+                                    <li><a href="<?= base_url('fb_login/logout') ?>">logi välja</a></li>
                                 </ul>
                             </li>
                         </ul>
