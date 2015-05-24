@@ -48,7 +48,7 @@
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>//form[@id='addform']/div/div[2]</td>
+	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
 <tr>
@@ -56,7 +56,6 @@
 	<td>css=div.media-body.well &gt; p.text-justify</td>
 	<td>Selenium test comment.</td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
